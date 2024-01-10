@@ -1,0 +1,21 @@
+<!-- greeting.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeting</title>
+</head>
+<body>
+    <div id="content">
+        <h1>Greeting Example</h1>
+        <p>Hello, {{ user.username|default:"Guest" }}!</p>
+
+        {% if user.is_authenticated %}
+            <p>Welcome back! You are authenticated.</p>
+        {% else %}
+            <p>You are not authenticated. Please log in.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+<form method="post" action="{% url 'form_view' %}">
+    {% csrf_token %}
+    <!-- {{ form.as_p }} Used DRY principle. Dont repeat yourself -->
+   {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>
